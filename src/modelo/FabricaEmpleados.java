@@ -13,10 +13,9 @@ public class FabricaEmpleados {
     static Map<Enum, Empleado> empleado =  new HashMap<>();
 
     static {
-        empleado.put(BUENO, HOMERO);
-        empleado.put(MALO, SMITHERS);
+        empleado.put(MALO, HOMERO);
+        empleado.put(BUENO, SMITHERS);
         empleado.put(null, NUEVO);
-
     }
 
     public static Empleado fabricar(Enum unTipo, String unNombre, String unApellido){
