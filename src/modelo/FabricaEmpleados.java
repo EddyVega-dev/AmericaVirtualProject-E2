@@ -1,7 +1,5 @@
 package modelo;
 
-import modelo.exception.TipoDeEmpleadoInvalidoException;
-
 import java.util.HashMap;
 import java.util.Map;
 
