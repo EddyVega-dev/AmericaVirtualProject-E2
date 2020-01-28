@@ -1,5 +1,6 @@
 
 import modelo.*;
+import modelo.exception.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -41,6 +42,15 @@ public class AmericaVirtualTest {
         EmpleadoBueno empleadoBueno = (EmpleadoBueno)(new EmpresaAmericaVirtual()).obtenerEmpleado(EMPLEADODB_BUENO_PRETENDIDO);
 
         assertEquals(SOLO_EMPLEADO_BUENO,empleadoBueno.getSoloEmpleadoBueno());
+
+    }
+
+    @Test
+    public void lanzamientoDeTipoEmpleadoInvalidoExceptionPorNoSerDeNingunTipoConocido(){
+
+        Empleado empleadoNuevo = (new EmpresaAmericaVirtual()).obtenerEmpleado(EMPLEADODB_NUEVO_PRETENDIDO);
+
+        assertEquals(NOMBRE_EMPLEADO_NUEVO_PRETENDIDO,empleadoNuevo.getNombre());
 
     }
 
