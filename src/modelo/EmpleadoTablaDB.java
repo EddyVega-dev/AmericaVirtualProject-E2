@@ -57,4 +57,10 @@ public class EmpleadoTablaDB {
     public void setSoloEmpleadoMalo(String soloEmpleadoMalo) {
         this.soloEmpleadoMalo = soloEmpleadoMalo;
     }
+
+    public Empleado generarEmpleado(FabricaEmpleados unaFabricaEmpleados) {
+
+        return unaFabricaEmpleados.fabricar(tipo, nombre, apellido);
+
+    }
 }
