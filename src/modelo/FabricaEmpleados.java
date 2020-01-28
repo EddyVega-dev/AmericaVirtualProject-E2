@@ -18,20 +18,19 @@ public class FabricaEmpleados {
         empleado.put(null, NUEVO);
     }
 
-    public static Empleado fabricar(Enum unTipo, String unNombre, String unApellido){
+    public static Empleado fabricar(TipoEmpleado unTipo, String unNombre, String unApellido){
 
+        Empleado empleadoFabricado =null;
 
         if (empleado.containsKey(unTipo)) {
 
-            Empleado empleadoFabricado = empleado.get(unTipo);
+            empleadoFabricado = empleado.get(unTipo);
             empleadoFabricado.setNombre(unNombre);
             empleadoFabricado.setApellido(unApellido);
 
-            return empleadoFabricado;
-
         }
 
-        throw new TipoDeEmpleadoInvalidoException();
+        return empleadoFabricado;
 
     }
 
