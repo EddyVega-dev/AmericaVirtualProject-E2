@@ -1,4 +1,6 @@
 
+import modelo.Empleado;
+import modelo.EmpresaAmericaVirtual;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -12,9 +14,9 @@ public class AmericaVirtualTest {
 
         EmpresaAmericaVirtual empresa = new EmpresaAmericaVirtual();
 
-        Empleado empleado = empresa.obtenerEmpleado(EMPLEADODB_MALO_PRETENDIDO);
+        Empleado empleadoMalo = empresa.obtenerEmpleado(EMPLEADODB_MALO_PRETENDIDO);
 
-        assertEquals("homero",empleado.getNombre());
+        assertEquals("homero",empleadoMalo.getNombre());
 
     }
 
