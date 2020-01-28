@@ -12,11 +12,9 @@ public class AmericaVirtualTest {
     @Test
     public void retornoAdecuadoDeNombreDeHomeroAlObtenerEmpleado(){
 
-        EmpresaAmericaVirtual empresa = new EmpresaAmericaVirtual();
+        Empleado empleadoMalo = (new EmpresaAmericaVirtual()).obtenerEmpleado(EMPLEADODB_MALO_PRETENDIDO);
 
-        Empleado empleadoMalo = empresa.obtenerEmpleado(EMPLEADODB_MALO_PRETENDIDO);
-
-        assertEquals("homero",empleadoMalo.getNombre());
+        assertEquals(NOMBRE_EMPLEADO_MALO_PRETENDIDO,empleadoMalo.getNombre());
 
     }
 
