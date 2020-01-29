@@ -34,7 +34,8 @@
     
 -   La clase FabricaEmpleados realiza un guardado estático de los tipos, ya obtenidos, y que se quiere fabricar guardandolos en el Map. Luego al llamado de fabricar se comprueba si se encuentra, fabrica al empleado adecuado y lo devuelve.
 
-    ```static {
+    ```
+           static {
                empleado.put(MALO, HOMERO);
                empleado.put(BUENO, SMITHERS);
                empleado.put(null, NUEVO);
