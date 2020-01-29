@@ -46,7 +46,7 @@
 
 - Diagrama de clases: 
 
-    ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E2/blob/master/AmericaVirtualUML.png)
+    ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E2/blob/master/AmericaVirtualUML-Ej2.png)
 
 ## Desarrollador
 
