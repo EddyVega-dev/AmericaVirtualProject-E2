@@ -58,9 +58,4 @@ public class EmpleadoTablaDB {
         this.soloEmpleadoMalo = soloEmpleadoMalo;
     }
 
-    public Empleado generarEmpleado(FabricaEmpleados unaFabricaEmpleados) {
-
-        return unaFabricaEmpleados.fabricar(tipo, nombre, apellido);
-
-    }
 }
