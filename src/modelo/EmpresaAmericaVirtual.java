@@ -2,9 +2,9 @@ package modelo;
 
 public class EmpresaAmericaVirtual {
 
-    public Empleado obtenerEmpleado(EmpleadoTablaDB unEmpleadodb) {
+    public Empleado obtenerEmpleado(EmpleadoTablaDB unEmpleadoDB) {
 
-        return unEmpleadodb.generarEmpleado(new FabricaEmpleados());
+        return FabricaEmpleados.fabricar(unEmpleadoDB);
 
     }
 
