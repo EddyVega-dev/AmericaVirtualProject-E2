@@ -2,50 +2,50 @@
 
 ## Descripción
 
--   
+-   Se pide codear un posible refactor del método:
 
-    > Marca: Peugeot // Modelo: 206 // Puertas: 4 // Precio: $200.000,00
+    `public Empleado obtenerEmpleado(EmpleadoTablaDB unEmpleadodb)`  
     
-    > Vehículo que contiene en el modelo la letra ‘Y’: Yamaha YBR $80.500,50
-    
--   También visualización de los vehículos de mayor a menor precio de la forma:
-    
-    > Peugeot 208
-    
+-   Con cierto criterio para obtenerlo:
+
+    ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E2/blob/master/AmerciaVirtualE2.png)
 
 ## Solución del programa
 
 -   JDK 8: Herramienta utilizada para el desarrollo de la solución del programa.
+
+-   JUnit 4.12: Herramienta utilizada para el desarrollo de test.
+
+-   Para este gestión de proyecto realice la metodología de trabajo de un proceso incremental la cuál es **Metodologías ágiles**.
     
 -   Diseño de solución orientada a objetos.
     
 -   Diseño de contrato sin romper el concepto de **encapsulamiento**.
-    
--   Diseño con una clase abstracta: _Vehicle_ y una interface: _Spec_ .
-    
--   No hay ingreso por pantalla de ningún tipo.
-    
--   La lista de vehículos, lo ví conveniente cargarlo en el constructor de `Dealership` ya que tiene sentido que una concesionaria tiene su inventario de sus vehículos, y no tiene que haber un ingreso por pantalla de ningún tipo.
-    
--   El diseño de la impresión lo solucioné con la propiedad de POO que es **polimorfismo** con la interface _Sepc_ ya que los vehículos como tal no tienen el comportamiento de 'imprimir' sus especificaciones.
-    
+ 
+-   Uso del patrón Simple Factory para generar Empleados y así evitar romper el encapsulamiento y repetición de código.
 
+-   El refactor ameritaba la delegación de tareas y construcción de empleados desde una clase, el patrón empleado realiza esas característica muy bien, teniendo en cuenta todos los tipos que se tienen y otorga la facilidad de optimizarlo a un agregado a futuro.
+  
 ## Explicación del programa
 
--   Para la impresión de pantalla utilicé _String.format_ para definir cada atributo de manera adecuada y usar la herramienta de decimales `%,.2f` que me ayudó para que se visualice de esta manera:
+-   Se realiza el patrón Factory de manera adecuada y se termina la refactorización de manera eficiente, concluyendo de toda esa llamada de getters y setters a una sola fabricación:
+ 
+    `FabricaEmpleados.fabricar(unEmpleadoDB)`
     
-    > $80.500,50
-    
--   Para realizar el ejercicio de mayor y menor precio en la lista de vehículos, lo resolví pensando en ordenarlo con la ayuda de la herramienta de `Sort` en la clases que heredan de `Comparable` y así obtener con seguridad el de mayor precio y, en caso contrario, el de menor precio, comparando uno a uno mandando mensajes de comparación sin romper el **encapsulamiento**.
-    
--   Se utilizó la herramienta de **herencia** de un nivel porque tanto los autos y motos heredan de vehículo, los hijos pueden llamar a sus atributos sin romper el **encapsulamiento**.
-    
+-   La clase FabricaEmpleados realiza un guardado estático de los tipos, ya obtenidos, y que se quiere fabricar guardandolos en el Map. Luego al llamado de fabricar se comprueba si se encuentra, fabrica al empleado adecuado y lo devuelve.
+
+    ```static {
+               empleado.put(MALO, HOMERO);
+               empleado.put(BUENO, SMITHERS);
+               empleado.put(null, NUEVO);
+           }
+    ```
 
 ## Diagrama UML
 
 - Diagrama de clases: 
 
-    ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/onreadyUML.png)
+    ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E2/blob/master/AmericaVirtualUML.png)
 
 ## Desarrollador
 
