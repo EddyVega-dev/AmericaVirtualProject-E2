@@ -6,7 +6,7 @@ import java.util.Map;
 import static modelo.Constantes.*;
 import static modelo.TipoEmpleado.*;
 
-public class FabricaEmpleados {
+public class FabricaEmpleado {
 
     static Map<Enum, Empleado> empleado =  new HashMap<>();
 
