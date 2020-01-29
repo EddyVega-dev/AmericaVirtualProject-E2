@@ -16,15 +16,15 @@ public class FabricaEmpleados {
         empleado.put(null, NUEVO);
     }
 
-    public static Empleado fabricar(TipoEmpleado unTipo, String unNombre, String unApellido){
+    public static Empleado fabricar(EmpleadoTablaDB unEmpleadoDB){
 
         Empleado empleadoFabricado =null;
 
-        if (empleado.containsKey(unTipo)) {
+        if (empleado.containsKey(unEmpleadoDB.getTipo())) {
 
-            empleadoFabricado = empleado.get(unTipo);
-            empleadoFabricado.setNombre(unNombre);
-            empleadoFabricado.setApellido(unApellido);
+            empleadoFabricado = empleado.get(unEmpleadoDB.getTipo());
+            empleadoFabricado.setNombre(unEmpleadoDB.getNombre());
+            empleadoFabricado.setApellido(unEmpleadoDB.getApellido());
 
         }
 
