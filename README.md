@@ -8,7 +8,7 @@
     
 -   Con cierto criterio para obtenerlo:
 
-    ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E2/blob/master/AmerciaVirtualE2.png)
+    ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E2/blob/master/AmericaVirtualE2.png)
 
 ## Solución del programa
 
