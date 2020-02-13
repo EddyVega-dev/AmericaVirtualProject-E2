@@ -9,7 +9,7 @@ import static modelo.Constantes.*;
 public class AmericaVirtualTest {
 
     @Test
-    public void retornoAdecuadoDeNombreDeHomeroAlObtenerEmpleadoMalo(){
+    public void testRetornoAdecuadoDeNombreDeHomeroAlObtenerEmpleadoMalo(){
 
         Empleado empleadoMalo = (new EmpresaAmericaVirtual()).obtenerEmpleado(EMPLEADODB_MALO_PRETENDIDO);
 
@@ -18,7 +18,7 @@ public class AmericaVirtualTest {
     }
 
     @Test
-    public void retornoApropiadoDeSoloTipoDeEmpleadoDeHomeroAlObtenerEmpleadoMalo(){
+    public void testRetornoApropiadoDeSoloTipoDeEmpleadoDeHomeroAlObtenerEmpleadoMalo(){
 
         EmpleadoMalo empleadoMalo = (EmpleadoMalo)(new EmpresaAmericaVirtual()).obtenerEmpleado(EMPLEADODB_MALO_PRETENDIDO);
 
@@ -27,7 +27,7 @@ public class AmericaVirtualTest {
     }
 
     @Test
-    public void retornoAdecuadoDeNombreDeSmithersAlObtenerEmpleadoBueno(){
+    public void testRetornoAdecuadoDeNombreDeSmithersAlObtenerEmpleadoBueno(){
 
         Empleado empleadoBueno = (new EmpresaAmericaVirtual()).obtenerEmpleado(EMPLEADODB_BUENO_PRETENDIDO);
 
@@ -36,7 +36,7 @@ public class AmericaVirtualTest {
     }
 
     @Test
-    public void retornoApropiadoDeSoloTipoDeEmpleadoDeSmithersAlObtenerEmpleadoMalo(){
+    public void testRetornoApropiadoDeSoloTipoDeEmpleadoDeSmithersAlObtenerEmpleadoMalo(){
 
         EmpleadoBueno empleadoBueno = (EmpleadoBueno)(new EmpresaAmericaVirtual()).obtenerEmpleado(EMPLEADODB_BUENO_PRETENDIDO);
 
@@ -45,7 +45,7 @@ public class AmericaVirtualTest {
     }
 
     @Test
-    public void lanzamientoDeTipoEmpleadoInvalidoExceptionPorNoSerDeNingunTipoConocido(){
+    public void testLanzamientoDeTipoEmpleadoInvalidoExceptionPorNoSerDeNingunTipoConocido(){
 
         Empleado empleadoNuevo = (new EmpresaAmericaVirtual()).obtenerEmpleado(EMPLEADODB_NUEVO_PRETENDIDO);
 
